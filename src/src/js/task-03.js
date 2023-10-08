@@ -12,3 +12,22 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const list = document.querySelector('.gallery');
+list.style.listStyle = 'none';
+list.style.display = 'flex';
+list.style.flexWrap = 'wrap';
+list.style.gap = '15px';
+
+
+
+function markup(arr){
+  return arr.map(({url, alt})=> `
+  <li>
+  <img src="${url}" alt="${alt}" width = 300px> 
+  </li>`)
+.join('')
+};
+
+
+list.insertAdjacentHTML("afterbegin", markup(images));
