@@ -1,13 +1,13 @@
 const userName = document.querySelector('#name-input');
-const  name = document.querySelector('#name-output');
+const  output = document.querySelector('#name-output');
 
-console.log(message);
 userName.addEventListener('input', handlerInput);
 
-function handlerInput (evt) {
-    console.log(evt.currentTarget.value)
+function handlerInput(evt) {
+    output.textContent = evt.currentTarget.value.trim();
+    
     if (evt.currentTarget.value === ''){
-        message = 'Anonymous';
-    } else 
-    name = '${userName}'
+        output.textContent = 'Anonymous';
+    }
 }
+
