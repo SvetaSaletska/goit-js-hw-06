@@ -12,5 +12,11 @@ function handlerSubmit(evt) {
       password: password.value
    }
 
+   if (email.value === ''|| password.value === '') {
+      alert ('All fields must be filled!')
+   }
+
    evt.currentTarget.reset();
+   console.log(data)
 }
+
